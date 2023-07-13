@@ -20,3 +20,6 @@ A program that prints exactly with proper grammar, but the outcome is a piece of
 
 # 6-size.c
 A program that prints the size of various types on the computer it is compiled and run on
+
+# 100-intel
+A script that generates the assembly code (Intel syntax) of a C code and save it in an output file
