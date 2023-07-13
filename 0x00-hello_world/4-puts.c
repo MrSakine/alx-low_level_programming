@@ -1,6 +1,6 @@
 /*
  * File: 4-puts.c
- * Auth: Fily M Sakine <msakine20@gmail.com>
+ * Author: Fily M Sakine <msakine20@gmail.com>
  */
 
 #include <stdio.h>
