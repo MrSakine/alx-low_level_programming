@@ -7,4 +7,7 @@ A script to print whether the number stored in the variable n is positive or neg
 Prints the last digit of the number
 
 # 2-print_alphabet.c
-Prints the alphabet in lowercase
+Prints the alphabet in lowercasie
+
+# 3-print_alphabets.c
+Prints the alphabet in lowercase, and then in uppercase
