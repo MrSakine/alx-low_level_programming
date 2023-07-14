@@ -21,7 +21,8 @@ int N = 10;
 for (n = 0; n < N; n++)
 {
 putchar(n + '0');
-if (n < N - 1){
+if (n < N - 1)
+{
 putchar(',');
 putchar(' ');
 }
