@@ -18,29 +18,19 @@ int main(void)
 {
 int n;
 int m;
-int z;
-int y;
-int N = 10;
-for (n = 0; n <= N - 1; n++)
+for (n = 0; n <= 98; n++)
 {
-for (m = n; m <= N - 1; m++)
+for (m = n; m <= 99; m++)
 {
-for (z = m; z <= N - 1; z++)
-{
-for (y = 0; y <= N - 1; y++)
-{
-putchar(n + '0');
-putchar(m + '0');
+putchar((n / 10) + '0');
+putchar((n % 10) + '0');
 putchar(' ');
-putchar(z + '0');
-putchar(y + '0');
-if (n < N)
-{
+putchar((m / 10) + '0');
+putchar((m % 10) + '0');
+if (n == 98 && m == 99)
+continue;
 putchar(',');
 putchar(' ');
-}
-}
-}
 }
 }
 putchar('\n');
