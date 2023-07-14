@@ -20,7 +20,7 @@ int n;
 int m;
 int z;
 int y;
-int N = 11;
+int N = 10;
 for (n = 0; n < N; n++)
 {
 for (m = n; m < N; m++)
@@ -33,7 +33,7 @@ putchar(n + '0');
 putchar(m + '0');
 putchar(' ');
 putchar(z + '0');
-putchar((y - 1) + '0');
+putchar(y + '0');
 if (n < N - 2)
 {
 putchar(',');
