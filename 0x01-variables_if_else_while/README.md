@@ -17,3 +17,6 @@ Prints the alphabet in lowercase, except 'e' and 'q'
 
 # 5-print_numbers.c
 Prints all single digit numbers, of base 10 starting from 0
+
+# 6-print_numberz.c
+Same as number 5
