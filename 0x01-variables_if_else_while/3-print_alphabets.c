@@ -9,7 +9,7 @@
 
 /**
  * main - Prints the alphabet in lowercase,
-                 and then in uppercase
+          and then in uppercase
  *
  *
  * Return: Always 0.
@@ -19,9 +19,9 @@ int main(void)
 char f;
 char F;
 for (f = 'a'; f <= 'z'; f++)
-putchar(f);
+    putchar(f);
 for (F = 'A'; F <= 'Z'; F++)
-putchar(F);
+    putchar(F);
 putchar('\n');
 return (0);
 }
