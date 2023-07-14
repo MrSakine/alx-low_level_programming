@@ -21,7 +21,7 @@ int m;
 int N = 10;
 for (n = 0; n < N; n++)
 {
-for (m = n+1; m < N; m++)
+for (m = n + 1; m < N; m++)
 {
 putchar(n + '0');
 putchar(m + '0');
