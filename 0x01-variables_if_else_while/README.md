@@ -11,3 +11,6 @@ Prints the alphabet in lowercasie
 
 # 3-print_alphabets.c
 Prints the alphabet in lowercase, and then in uppercase
+
+# 4-print_alphabt.c
+Prints the alphabet in lowercase, except 'e' and 'q'
