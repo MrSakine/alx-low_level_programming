@@ -21,20 +21,20 @@ int m;
 int z;
 int y;
 int N = 10;
-for (n = 0; n < N; n++)
+for (n = 0; n <= N - 1; n++)
 {
-for (m = n; m < N; m++)
+for (m = n; m <= N - 1; m++)
 {
-for (z = m; z < N; z++)
+for (z = m; z <= N - 1; z++)
 {
-for (y = z + 1; y < N; y++)
+for (y = 0; y <= N - 1; y++)
 {
 putchar(n + '0');
 putchar(m + '0');
 putchar(' ');
 putchar(z + '0');
 putchar(y + '0');
-if (n < N - 2)
+if (n < N)
 {
 putchar(',');
 putchar(' ');
