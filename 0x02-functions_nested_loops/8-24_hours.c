@@ -12,7 +12,7 @@
 * Return: void
 */
 
-void jack_bauer()
+void jack_bauer(void)
 {
 int N = 23;
 int M = 60;
