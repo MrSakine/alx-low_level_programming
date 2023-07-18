@@ -43,7 +43,7 @@ void times_table(void)
             z += 1;
         }
         
-        putchar('\n');
+        _putchar('\n');
     }
 
     return;
