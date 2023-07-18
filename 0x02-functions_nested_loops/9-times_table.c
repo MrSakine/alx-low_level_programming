@@ -23,25 +23,25 @@ void times_table(void)
         putchar(',');
         putchar(' ');
         
-            int z = 0;
-            int y = 0;
-            
-            while (z < N) {
-                y += i;
-                if ((y / 10) >= 1) {
-                    putchar((y / 10) + '0');
-                    putchar((y % 10) + '0');   
-                }else{
-                    putchar((y % 10) + '0');
-                }
-                
-                if (z < N - 1) {
-                    putchar(',');
-                    putchar(' ');   
-                }
-                
-                z += 1;
+        z = 0;
+        y = 0;
+        
+        while (z < N) {
+            y += i;
+            if ((y / 10) >= 1) {
+                putchar((y / 10) + '0');
+                putchar((y % 10) + '0');   
+            }else{
+                putchar((y % 10) + '0');
             }
+            
+            if (z < N - 1) {
+                putchar(',');
+                putchar(' ');   
+            }
+            
+            z += 1;
+        }
         
         putchar('\n');
     }
