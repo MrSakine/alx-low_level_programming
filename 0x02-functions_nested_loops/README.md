@@ -11,3 +11,6 @@ Prints 10 times the alphabet, in lowercase, followed by a new line
 
 # 3-islower.c
 Check for lowercase character
+
+# 4-isalpha.c
+Check for alphabetic character
