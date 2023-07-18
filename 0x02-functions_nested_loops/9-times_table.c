@@ -19,9 +19,9 @@ void times_table(void)
     int y;
     
     for (i = 0; i < N; i++) {
-        putchar('0');
-        putchar(',');
-        putchar(' ');
+        _putchar('0');
+        _putchar(',');
+        _putchar(' ');
         
         z = 0;
         y = 0;
@@ -29,15 +29,15 @@ void times_table(void)
         while (z < N) {
             y += i;
             if ((y / 10) >= 1) {
-                putchar((y / 10) + '0');
-                putchar((y % 10) + '0');   
+                _putchar((y / 10) + '0');
+                _putchar((y % 10) + '0');   
             }else{
-                putchar((y % 10) + '0');
+                _putchar((y % 10) + '0');
             }
             
             if (z < N - 1) {
-                putchar(',');
-                putchar(' ');   
+                _putchar(',');
+                _putchar(' ');   
             }
             
             z += 1;
