@@ -14,6 +14,6 @@
 
 int _abs(int n)
 {
-    unsigned int i = n < 0 ? -n : n;
-    return (i);
+unsigned int i = n < 0 ? -n : n;
+return (i);
 }
