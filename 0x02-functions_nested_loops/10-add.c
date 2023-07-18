@@ -15,7 +15,7 @@
 
 int add(int a, int b)
 {
-    unsigned int x = a < 0 ? -a : a;
-    unsigned int y = b < 0 ? -b : b;
-    return (x + y);
+signed int x = a;
+signed int y = b;
+return (x + y);
 }
