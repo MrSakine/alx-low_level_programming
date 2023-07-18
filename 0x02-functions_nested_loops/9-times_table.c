@@ -37,7 +37,7 @@ void times_table(void)
             
             if (z < N - 1) {
                 _putchar(',');
-                _putchar('  ');
+                _putchar(' ');
                 _putchar(' ');
             }
             
