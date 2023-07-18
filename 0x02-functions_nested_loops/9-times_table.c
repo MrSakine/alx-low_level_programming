@@ -26,12 +26,12 @@ void times_table(void)
         z = 0;
         y = 0;
         
-        while (z < N) {
+        while (z < N - 1) {
             y += i;
             _putchar((y / 10) + '0');
             _putchar((y % 10) + '0');   
             
-            if (z < N - 1) {
+            if (z < N - 2) {
                 _putchar(',');
                 _putchar(' ');   
             }
