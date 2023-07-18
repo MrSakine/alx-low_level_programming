@@ -22,6 +22,7 @@ void times_table(void)
         _putchar('0');
         _putchar(',');
         _putchar(' ');
+        _putchar(' ');
         
         z = 0;
         y = 0;
@@ -38,10 +39,6 @@ void times_table(void)
             if (z < N - 2) {
                 _putchar(',');
                 _putchar(' ');
-
-                if ((y / 10) <= 0) {
-                    _putchar(' ');
-                }
             }
             
             z += 1;
