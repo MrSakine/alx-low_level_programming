@@ -13,39 +13,39 @@
 
 void times_table(void)
 {
-    int N = 10;
-    int i;
-    int z;
-    int y;
-    
-    for (i = 0; i < N; i++) {
-        _putchar('0');
-        _putchar(',');
-        _putchar(' ');
-        
-        z = 0;
-        y = 0;
-        
-        while (z < N - 1) {
-            y += i;
-            if (y / 10) {
-                _putchar((y / 10) + '0');
-            }else{
-                _putchar(' ');
-            }
-            
-            _putchar((y % 10) + '0');
-            
-            if (z < N - 2) {
-                _putchar(',');
-                _putchar(' ');   
-            }
-            
-            z += 1;
-        }
-    
-    _putchar('\n');
-    }
+int N = 10;
+int i;
+int z;
+int y;
 
-    return;
+for (i = 0; i < N; i++) {
+_putchar('0');
+_putchar(',');
+_putchar(' ');
+
+z = 0;
+y = 0;
+
+while (z < N - 1) {
+y += i;
+if (y / 10) {
+_putchar((y / 10) + '0');
+}else{
+_putchar(' ');
+}
+
+_putchar((y % 10) + '0');
+
+if (z < N - 2) {
+_putchar(',');
+_putchar(' ');   
+}
+
+z += 1;
+}
+
+_putchar('\n');
+}
+
+return;
 }
