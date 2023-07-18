@@ -12,22 +12,24 @@
 * Return: void
 */
 
-void jack_bauer()
+void jack_bauer(void)
 {
-    int N = 23;
-    int M = 60;
-    int i;
-    int j;
-  
-    for (i = 0; i <= N; i++) {
-        for (j = 0; j < M; j++) {
-          _putchar((i / 10) + '0');
-          _putchar((i % 10) + '0');
-          _putchar(':');
-          _putchar((j / 10) + '0');
-          _putchar((j % 10) + '0');
-          _putchar('\n');
-        }
-    }
-    return;
+int N = 23;
+int M = 60;
+int i;
+int j;
+
+for (i = 0; i <= N; i++)
+{
+for (j = 0; j < M; j++)
+{
+_putchar((i / 10) + '0');
+_putchar((i % 10) + '0');
+_putchar(':');
+_putchar((j / 10) + '0');
+_putchar((j % 10) + '0');
+_putchar('\n');
+}
+}
+return;
 }
