@@ -40,7 +40,7 @@ void times_table(void)
                 _putchar(',');
                 _putchar(' ');
 
-                if (!(y / 10) >= 1) {
+                if ((y / 10) == 0) {
                     _putchar(' ');
                 }
             }
