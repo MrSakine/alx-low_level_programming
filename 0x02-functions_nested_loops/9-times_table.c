@@ -33,6 +33,7 @@ void times_table(void)
                 _putchar((y % 10) + '0');   
             }else{
                 _putchar((y % 10) + '0');
+                _putchar(' ');
             }
             
             if (z < N - 2) {
