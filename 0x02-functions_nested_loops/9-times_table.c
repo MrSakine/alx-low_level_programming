@@ -39,7 +39,7 @@ _putchar((y % 10) + '0');
 if (z < N - 2)
 {
 _putchar(',');
-_putchar(' ');   
+_putchar(' ');
 }
 z += 1;
 }
