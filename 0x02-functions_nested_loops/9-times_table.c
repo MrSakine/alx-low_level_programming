@@ -13,7 +13,7 @@
 
 void times_table(void)
 {
-    int N = 10;
+    int N = 9;
     int i;
     int z;
     int y;
@@ -22,33 +22,27 @@ void times_table(void)
         _putchar('0');
         _putchar(',');
         _putchar(' ');
-        _putchar(' ');
         
         z = 0;
         y = 0;
         
-        while (z < N - 1) {
+        while (z < N) {
             y += i;
+            if (y / 10) {
+                _putchar((y / 10) + '0');
+            }
             
-            if (z < N - 2) {
-                if ((y / 10) >= 1) {
-                    _putchar((y / 10) + '0');
-                    _putchar((y % 10) + '0');   
-                }else{
-                    _putchar((y % 10) + '0');
-                }
+            _putchar((y % 10) + '0');
+            
+            if (z < N - 1) {
                 _putchar(',');
-                _putchar(' ');
-
-                if ((y / 10) == 0) {
-                    _putchar(' ');
-                }
+                _putchar(' ');   
             }
             
             z += 1;
         }
     
-        _putchar('\n');
+    _putchar('\n');
     }
 
     return;
