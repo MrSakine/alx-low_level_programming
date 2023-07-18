@@ -31,9 +31,7 @@ void times_table(void)
             y += i;
             
             if (z < N - 2) {
-                bool u = (y / 10) >= 1;
-                
-                if (u) {
+                if ((y / 10) >= 1) {
                     _putchar((y / 10) + '0');
                     _putchar((y % 10) + '0');   
                 }else{
@@ -42,7 +40,7 @@ void times_table(void)
                 _putchar(',');
                 _putchar(' ');
 
-                if (!u) {
+                if (!(y / 10) >= 1) {
                     _putchar(' ');
                 }
             }
