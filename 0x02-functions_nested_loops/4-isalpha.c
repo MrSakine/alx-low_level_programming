@@ -15,13 +15,13 @@
 
 int _isalpha(int c)
 {
-    char a = c;
-    if ((a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z'))
-    {
-        return (1);
-    }
-    else
-    {
-        return (0);
-    }
+char a = c;
+if ((a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z'))
+{
+return (1);
+}
+else
+{
+return (0);
+}
 }
