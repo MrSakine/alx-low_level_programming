@@ -19,10 +19,6 @@ void times_table(void)
     int y;
     
     for (i = 0; i < N; i++) {
-        _putchar('0');
-        _putchar(',');
-        _putchar(' ');
-        
         z = 0;
         y = 0;
         
