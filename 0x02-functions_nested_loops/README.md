@@ -17,3 +17,6 @@ Check for alphabetic character
 
 # 6-abs.c
 Computes the absolute value of an integer
+
+# 7-print_last_digit.c
+Prints the last digit of a number
