@@ -7,6 +7,7 @@
 
 /**
  * print_number - prints an integer
+ * @n: the number to print
  *
  * Return: Always 0.
  */
