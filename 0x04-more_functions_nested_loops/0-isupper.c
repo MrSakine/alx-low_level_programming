@@ -14,17 +14,17 @@
  */
 
 int _isupper(int c) {
-  char a;
-  if (c >= '0' && c <= '9') {
-    a = c + '0';
-  } else {
-    a = c;
-  }
-  if (a >= 'a' && a <= 'z') {
-    return (0);
-  } else if (a >= 'A' && a <= 'Z') {
-    return (1);
-  } else {
-    return (1);
-  }
+char a;
+if (c >= '0' && c <= '9') {
+a = c + '0';
+} else {
+a = c;
+}
+if (a >= 'a' && a <= 'z') {
+return (0);
+} else if (a >= 'A' && a <= 'Z') {
+return (1);
+} else {
+return (1);
+}
 }
