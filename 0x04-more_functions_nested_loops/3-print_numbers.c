@@ -12,7 +12,8 @@
  * Return: void
  */
 
-void print_numbers(void) {
+void print_numbers(void)
+{
 int n = 9;
 int i;
 for (i = 0; i <= n; i++)
