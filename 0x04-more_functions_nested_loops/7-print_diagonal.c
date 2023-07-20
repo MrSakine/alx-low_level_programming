@@ -28,6 +28,7 @@ for (j = 0; j < n; j++)
 if (j == i)
 {
 _putchar(c);
+break;
 }else{
 _putchar(' ');
 }
