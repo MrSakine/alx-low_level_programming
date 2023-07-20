@@ -39,3 +39,7 @@ prints the numbers from 1 to 100,
 # 10-print_triangle.c
 prints a triangle,
  * followed by a new line
+
+# 101-print_number.c
+prints an integer
+
