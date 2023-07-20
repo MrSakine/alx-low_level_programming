@@ -13,14 +13,20 @@
  * Otherwise 0
  */
 
-int _isupper(int c) {
+int _isupper(int c)
+{
 char a;
 a = c;
-if (a >= 'a' && a <= 'z') {
+if (a >= 'a' && a <= 'z')
+{
 return (0);
-} else if (a >= 'A' && a <= 'Z') {
+}
+else if (a >= 'A' && a <= 'Z')
+{
 return (1);
-} else {
+}
+else
+{
 return (0);
 }
 }
