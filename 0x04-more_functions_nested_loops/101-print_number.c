@@ -13,30 +13,30 @@
 
 void print_number(int n)
 {
-  unsigned int m = n < 0 ? -n : n;
+unsigned int m = n < 0 ? -n : n;
 
-  if (n < 0)
-  {
-    _putchar('-');
-  }
+if (n < 0)
+{
+_putchar('-');
+}
 
-  if (m >= 1000)
-  {
-    _putchar((m / 1000) + '0');
-    _putchar(((m / 100) % 10) + '0');
-    _putchar(((m / 10)) % 10 + '0');
-  }
-  else if (m >= 100)
-  {
-    _putchar((m / 100) + '0');
-    _putchar(((m / 10)) % 10 + '0');
-  }
-  if (m <= 99 && m >= 10)
-  {
-    _putchar((m / 10) + '0');
-  }
+if (m >= 1000)
+{
+_putchar((m / 1000) + '0');
+_putchar(((m / 100) % 10) + '0');
+_putchar(((m / 10)) % 10 + '0');
+}
+else if (m >= 100)
+{
+_putchar((m / 100) + '0');
+_putchar(((m / 10)) % 10 + '0');
+}
+if (m <= 99 && m >= 10)
+{
+_putchar((m / 10) + '0');
+}
 
-  _putchar((m % 10) + '0');
+_putchar((m % 10) + '0');
 
-  return;
+return;
 }
