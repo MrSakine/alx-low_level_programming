@@ -21,6 +21,6 @@ return (0);
 } else if (a >= 'A' && a <= 'Z') {
 return (1);
 } else {
-return (1);
+return (0);
 }
 }
