@@ -14,7 +14,7 @@
  * Return: void
  */
 
-void print_diagonal(int n) {
+void print_diagonal(int size) {
   int i;
   int j;
   char c;
