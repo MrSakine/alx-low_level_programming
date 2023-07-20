@@ -15,30 +15,29 @@
 
 void print_triangle(int size)
 {
-  int i;
-  int j;
-  int k;
-  char c;
-  if (size > 0)
-  {
-    c = 35;
-    for (i = 0; i < size; i++)
-    {
-      for (j = 0; j < (size - i) - 1; j++)
-      {
-        _putchar(' ');
-      }
-
-      for (k = 0; k <= i; k++)
-      {
-        _putchar(c);
-      }
-
-      _putchar('\n');
-    }
-  }
-  else
-  {
-    _putchar('\n');
-  }
+int i;
+int j;
+int k;
+char c;
+if (size > 0)
+{
+c = 35;
+for (i = 0; i < size; i++)
+{
+for (j = 0; j < (size - i) - 1; j++)
+{
+_putchar(' ');
+}
+for (k = 0; k <= i; k++)
+{
+_putchar(c);
+}
+_putchar('\n');
+}
+}
+else
+{
+_putchar('\n');
+}
+return;
 }
