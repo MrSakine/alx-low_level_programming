@@ -20,12 +20,16 @@ int j;
 char c;
 if (n > 0) {
 c = 92;
-for (i = 0; i < n; i++) {
-for (j = 0; j < n; j++) {
+for (i = 0; i < n; i++)
+{
+for (j = 0; j < n; j++)
+{
 if (j == i) {
 _putchar(c);
 break;
-}else{
+}
+else
+{
 _putchar(' ');
 }
 }
