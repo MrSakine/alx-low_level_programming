@@ -40,6 +40,10 @@ prints the numbers from 1 to 100,
 prints a triangle,
  * followed by a new line
 
+# 100-prime_factor.c
+prints the largest prime factor of
+ * the number 612852475143, followed by a new line.
+
 # 101-print_number.c
 prints an integer
 
