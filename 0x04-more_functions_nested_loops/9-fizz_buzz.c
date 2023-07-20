@@ -14,7 +14,7 @@
  * Return: Always 0.
  */
 
-int main()
+int main(void)
 {
 int N = 100;
 int i;
