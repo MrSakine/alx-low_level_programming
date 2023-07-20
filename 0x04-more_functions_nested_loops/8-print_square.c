@@ -14,20 +14,26 @@
  * Return: void
  */
 
-void print_square(int size) {
-  int i;
-  int j;
-  char c;
-  if (size > 0) {
-    c = 35;
-    for (i = 0; i < size; i++) {
-      for (j = 0; j < size; j++) {
-          _putchar(c);
-      }
-      _putchar('\n');
-    }
-  } else {
-    _putchar('\n');
-  }
-  return;
+void print_square(int size)
+{
+int i;
+int j;
+char c;
+if (size > 0)
+{
+c = 35;
+for (i = 0; i < size; i++)
+{
+for (j = 0; j < size; j++)
+{
+_putchar(c);
+}
+_putchar('\n');
+}
+}
+else
+{
+_putchar('\n');
+}
+return;
 }
