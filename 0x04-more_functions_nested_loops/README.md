@@ -35,3 +35,7 @@ prints a square,
 # 9-fizz_buzz.c
 prints the numbers from 1 to 100,
  * followed by a new line
+
+# 10-print_triangle.c
+prints a triangle,
+ * followed by a new line
