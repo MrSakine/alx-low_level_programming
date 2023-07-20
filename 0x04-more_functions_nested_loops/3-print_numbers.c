@@ -13,12 +13,12 @@
  */
 
 void print_numbers(void) {
-    int n = 9;
-    int i;
-    for (i = 0; i <= n; i++)
-    {
-        _putchar(i + '0');
-    }
-    _putchar('\n');
-    return;
+int n = 9;
+int i;
+for (i = 0; i <= n; i++)
+{
+_putchar(i + '0');
+}
+_putchar('\n');
+return;
 }
