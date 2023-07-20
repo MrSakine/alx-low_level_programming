@@ -18,10 +18,10 @@ void print_diagonal(int size) {
   int i;
   int j;
   char c;
-  if (n > 0) {
+  if (size > 0) {
     c = 35;
-    for (i = 0; i < n; i++) {
-      for (j = 0; j < n; j++) {
+    for (i = 0; i < size; i++) {
+      for (j = 0; j < size; j++) {
           _putchar(c);
       }
       _putchar('\n');
