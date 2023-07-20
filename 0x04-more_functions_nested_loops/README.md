@@ -30,4 +30,8 @@ Draws a diagonal line on the terminal
 
 # 8-print_square.c
 prints a square,
+ * followed by a new linie
+
+# 9-fizz_buzz.c
+prints the numbers from 1 to 100,
  * followed by a new line
