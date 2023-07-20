@@ -13,24 +13,32 @@
  * Return: void
  */
 
-void print_diagonal(int n) {
+void print_diagonal(int n)
+{
 int i;
 int j;
 char c;
-if (n > 0) {
+if (n > 0)
+{
 c = 92;
-for (i = 0; i < n; i++) {
-for (j = 0; j < n; j++) {
+for (i = 0; i < n; i++)
+{
+for (j = 0; j < n; j++)
+{
 if (j == i) {
 _putchar(c);
 _putchar('\n');
 break;
-} else {
+}
+else
+{
 _putchar(' ');
 }
 }
 }
-} else {
+}
+else
+{
 _putchar('\n');
 }
 return;
