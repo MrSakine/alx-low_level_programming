@@ -11,3 +11,6 @@ A function that returns the length of a string
 
 # 3-puts.c
 A function that prints a string, followed by a new line, to stdout
+
+# 4-print_rev.c
+A function that prints a string, in reverse, followed by a new line
