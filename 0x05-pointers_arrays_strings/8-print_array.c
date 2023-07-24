@@ -3,7 +3,7 @@
  * Author: Fily M Sakine <msakine20@gmail.com>
  */
 
-#include "main.h"
+#include <stdio.h>
 
 /**
  * print_array - prints n elements of an array of integers
