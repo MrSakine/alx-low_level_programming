@@ -20,11 +20,13 @@ int i = 0;
 int len = 0;
 int n = 0;
 
-while (str[i++]) {
+while (str[i++])
+{
 len++;
 }
 
-if ((len % 2) == 0) {
+if ((len % 2) == 0)
+{
 n = len / 2;
 }
 else
