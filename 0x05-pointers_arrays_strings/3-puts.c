@@ -3,6 +3,7 @@
  * Author: Fily M Sakine <msakine20@gmail.com>
  */
 
+#include <unistd.h>
 #include "main.h"
 
 int __putchar(char c)
