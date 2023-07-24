@@ -3,8 +3,12 @@
  * Author: Fily M Sakine <msakine20@gmail.com>
  */
 
-#include <unistd.h>
 #include "main.h"
+
+int __putchar(char c)
+{
+	return (write(1, &c, 1));
+}
 
 /**
  * _puts - prints a string,
@@ -21,8 +25,8 @@ void _puts(char *str)
 
 	for (j = 0; str[j] != '\0'; j++)
 	{
-		putchar(str[j]);
+		__putchar(str[j]);
 	}
 
-	putchar('\n');
+	__putchar('\n');
 }
