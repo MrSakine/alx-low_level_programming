@@ -14,13 +14,13 @@
 
 int _strlen(char *s)
 {
-    int i = 0;
-    int j;
-    
-    for (j = 0; s[j] != '\0'; j++)
-    {
-        i += 1;
-    }
+int i = 0;
+int j;
 
-    return (i);
+for (j = 0; s[j] != '\0'; j++)
+{
+    i += 1;
+}
+
+return (i);
 }
