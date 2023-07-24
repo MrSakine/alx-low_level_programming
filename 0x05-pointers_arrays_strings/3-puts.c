@@ -6,11 +6,6 @@
 #include <unistd.h>
 #include "main.h"
 
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-
 /**
  * _puts - prints a string,
  * followed by a new line, to stdout
@@ -22,12 +17,12 @@ int _putchar(char c)
 
 void _puts(char *str)
 {
-    int j;
+	int j;
 
-    for (j = 0; str[j] != '\0'; j++)
-    {
-        _putchar(str[j]);
-    }
+	for (j = 0; str[j] != '\0'; j++)
+	{
+		write(1, &(str[j]), 1);
+	}
 
-    _putchar('\n');
+	write(1, &('\n'), 1);
 }
