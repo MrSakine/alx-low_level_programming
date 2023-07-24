@@ -18,9 +18,7 @@ int i = 0;
 int j;
 
 for (j = 0; s[j] != '\0'; j++)
-{
-    i += 1;
-}
+i += 1;
 
 return (i);
 }
