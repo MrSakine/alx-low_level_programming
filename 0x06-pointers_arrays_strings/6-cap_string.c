@@ -13,7 +13,7 @@
  * Return: char*.
  */
 
-char *cap_string(char *a)
+char *cap_string(char *str)
 {
 int index = 0;
 
