@@ -12,7 +12,6 @@
  *
  * Return: void.
  */
-
 void print_number(int n)
 {
 	unsigned int num = 0;
@@ -30,7 +29,8 @@ void print_number(int n)
 
 	m = num;
 
-	if (num / 10) {
+	if (num / 10)
+	{
 		print_number(num / 10);
 	}
 
