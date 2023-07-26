@@ -8,7 +8,7 @@
 /**
  * cap_string - capitalizes all words of a string
  *
- * @a: string to change
+ * @str: string to change
  *
  * Return: char*.
  */
