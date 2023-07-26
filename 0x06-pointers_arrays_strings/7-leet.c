@@ -21,9 +21,11 @@ char number[] = {4, 3, 0, 7, 1};
 int i;
 int j;
 
-for (i = 0; a[i] != '\0'; i++) {
+for (i = 0; a[i] != '\0'; i++)
+{
 for (j = 0; j < 5; j++) {
-if (a[i] == low[j] || a[i] == upper[j]) {
+if (a[i] == low[j] || a[i] == upper[j])
+{
 a[i] = number[j] + '0';
 }
 }
