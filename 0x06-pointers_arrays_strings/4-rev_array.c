@@ -11,7 +11,6 @@
  *
  * @a: array
  * @n: length of array
-
  *
  * Return: void.
  */
