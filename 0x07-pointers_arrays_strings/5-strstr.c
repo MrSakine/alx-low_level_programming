@@ -33,7 +33,7 @@ char *_strstr(char *haystack, char *needle)
 		{
 			if (needle[j] == haystack[i])
 			{
-				return (haystack + (len1 - len2));
+				return (haystack + (len1 - len2 + 1));
 			}
 		}
 	}
