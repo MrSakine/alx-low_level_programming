@@ -3,6 +3,7 @@
  * Author: Fily M Sakine <msakine20@gmail.com>
  */
 
+#include <stdio.h>
 #include "main.h"
 
 /**
