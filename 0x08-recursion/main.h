@@ -10,5 +10,6 @@ int _pow_recursion(int x, int y);
 int _sqrt_recursion(int n);
 int is_prime_number(int n);
 int _calculate_root(int num, int root);
+int _is_divisible_by(int d, int n);
 
 #endif /* MAIN_H */
