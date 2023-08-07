@@ -31,8 +31,6 @@ char *_strdup(char *str)
 		len++;
 	}
 
-	printf("%d\n", len);
-
 	if (str == NULL)
 	{
 		return (NULL);
