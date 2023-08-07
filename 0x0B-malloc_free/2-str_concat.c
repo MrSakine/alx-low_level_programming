@@ -19,8 +19,6 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-char *str_concat(char *s1, char *s2)
-{
 	char *s;
 	int i = 0;
 	int j;
@@ -60,5 +58,4 @@ char *str_concat(char *s1, char *s2)
 	}
 	s[i] = '\0';
 	return (s);
-}
 }
