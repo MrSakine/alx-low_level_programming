@@ -19,11 +19,23 @@
  */
 char *str_concat(char *s1, char *s2)
 {
+char *str_concat(char *s1, char *s2)
+{
 	char *s;
 	int i = 0;
 	int j;
 	int len = 0;
 	int len1 = 0;
+
+	if (s1 == NULL && s2 == NULL)
+	{
+		s1 = "";
+		s2 = "";
+	}
+	else if (s1 == NULL)
+		s1 = "";
+	else if (s2 == NULL)
+		s2 = "";
 
 	while (s1[i++])
 		len++;
@@ -48,4 +60,5 @@ char *str_concat(char *s1, char *s2)
 	}
 	s[i] = '\0';
 	return (s);
+}
 }
