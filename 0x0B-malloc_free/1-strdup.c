@@ -20,8 +20,8 @@
 char *_strdup(char *str)
 {
 	char *s;
-	int i;
-	int len;
+	int i = 0;
+	int len = 0;
 
 	if (str == NULL)
 	{
