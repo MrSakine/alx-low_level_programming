@@ -20,30 +20,25 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *s;
-	int i;
+	int i = 0;
 	int j;
 	int len = 0;
 	int len1 = 0;
-	i = 0;
-
 	while (s1[i++])
 		len++;
 	i = 0;
-
 	while (s2[i++])
 		len1++;
 	s = malloc((len + len1 + 1) * sizeof(char));
 	if (s == NULL)
 		return (NULL);
 	i = 0;
-
 	while (i < len)
 	{
 		s[i] = s1[i];
 		i++;
 	}
 	j = 0;
-
 	while (j < len1)
 	{
 		s[i] = s2[j];
