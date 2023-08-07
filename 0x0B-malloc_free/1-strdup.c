@@ -22,23 +22,32 @@ char *_strdup(char *str)
 	char *s;
 	int i;
 	int j;
+	int len;
+
+	i = 0;
+
+	while (str[i++])
+	{
+		len++;
+	}
+
+	printf("%d\n", len);
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
 
-	s = malloc((sizeof(*str) * sizeof(char)) + 1);
+	s = malloc((len * sizeof(char)) + 1);
 
 	if (s == NULL)
 	{
 		return (NULL);
 	}
 
-	i = sizeof(str);
 	j = 0;
 
-	while (j < i)
+	while (j < len)
 	{
 		s[j] = str[j];
 		j++;
