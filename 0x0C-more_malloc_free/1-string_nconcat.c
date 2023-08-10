@@ -14,7 +14,7 @@
  * @s2: second string
  * @n: amount of bytes to copy from second string
  *
- * Return: new string from concatenation
+ * Return: new string from concatenation or null
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
