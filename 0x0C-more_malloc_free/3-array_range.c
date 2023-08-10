@@ -11,7 +11,7 @@
  * array_range - creates an array of integers.
  *
  * @min: minimum element
- * @size: maximum element
+ * @max: maximum element
  *
  * Return: pointer to the allocated memory
  */
@@ -33,9 +33,7 @@ int *array_range(int min, int max)
 		return (NULL);
 
 	for (i = 0; i < size; i++)
-	{
 		a[i] = min++;
-	}
 
 	return (a);
 }
