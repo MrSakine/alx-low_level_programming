@@ -1,3 +1,12 @@
+/*
+ * File: 2-main.c
+ * Author: Fily M Sakine <msakine20@gmail.com>
+ */
+
+#include <stddef.h>
+#include <stdlib.h>
+#include <stdio.h>
+
 /**
  * main - check the code
  *
