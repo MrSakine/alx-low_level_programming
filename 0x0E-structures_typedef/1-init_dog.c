@@ -3,6 +3,8 @@
  * Author: Fily M Sakine <msakine20@gmail.com>
  */
 
+#include "dog.h"
+
 /**
  * init_dog - init a dog type structure.
  *
