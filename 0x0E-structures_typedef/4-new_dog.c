@@ -21,6 +21,11 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
+	if (name == NULL || age < 0 || owner == NULL)
+	{
+		return (NULL);
+	}
+
 	dog_t *d;
 
 	d = malloc(sizeof(dog_t));
@@ -30,9 +35,62 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	d->name = name;
+	d->name = malloc((_strlen(name) + 1) * sizeof(dog_t));
+	if (d->name == NULL)
+	{
+		free(d);
+		return (NULL);
+	}
+	d->owner = malloc((_strlen(owner) + 1) * sizeof(dog_t));
+	if (d->owner == NULL)
+	{
+		free(d->name);
+		free(d);
+	}
+
+	d->name = _strcpy(d->name, name);
 	d->age = age;
-	d->owner = owner;
+	d->owner = _strcpy(d->owner, owner);
 
 	return (d);
+}
+
+/**
+ * _strcpy - copies the string pointed to by src
+ * including the terminating null byte (\0)
+ * to the buffer pointed to by dest
+ *
+ * @dest: copy destination
+ * @src: copy source
+ *
+ * Return: the pointer to dest.
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	int i = 0;
+
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+
+	return (dest);
+}
+
+/**
+ * _strlen - Finds the length of a string.
+ * @str: The string to be measured.
+ *
+ * Return: The length of the string.
+ */
+int _strlen(char *str)
+{
+	int len = 0;
+
+	while (*str++)
+		len++;
+
+	return (len);
 }
