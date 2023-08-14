@@ -1,3 +1,6 @@
+#ifndef DOG_H
+#define DOG_H
+
 /*
  * File: dog.h
  * Author: Fily M Sakine <msakine20@gmail.com>
@@ -20,3 +23,10 @@ struct dog
 	float age;
 	char *owner;
 };
+
+/**
+ * dog_t - Typedef for struct dog
+ */
+typedef struct dog dog_t;
+
+#endif
