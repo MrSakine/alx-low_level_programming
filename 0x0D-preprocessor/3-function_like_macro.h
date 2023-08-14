@@ -3,8 +3,8 @@
 
 /*
  * File: 3-function_like_macro.h
- * Auth: Fily Mohamed Sakine
- * Desc: a function-like macro ABS(x) that computes
+ * Author: Fily Mohamed Sakine
+ * Description: a function-like macro ABS(x) that computes
  * the absolute value of a number x
  */
 
