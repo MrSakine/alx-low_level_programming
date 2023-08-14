@@ -3,8 +3,8 @@
 
 /*
  * File: 4-sum.h
- * Auth: Fily Mohamed Sakine
- * Desc: a function-like macro SUM(x, y)
+ * Author: Fily Mohamed Sakine
+ * Description: a function-like macro SUM(x, y)
  * that computes the sum of the numbers x and y
  */
 
