@@ -3,6 +3,10 @@
  * Author: Fily M Sakine <msakine20@gmail.com>
  */
 
+#include <stddef.h>
+#include <stdlib.h>
+#include <stdio.h>
+
 /**
  * struct dog - dog type structure.
  *
@@ -14,7 +18,8 @@
  * the following attributes:
  * name, age and owner
  */
-struct dog {
+struct dog
+{
 	char *name;
 	float age;
 	char *owner;
