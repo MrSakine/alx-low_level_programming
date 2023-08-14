@@ -62,7 +62,7 @@ dog_t *new_dog(char *name, float age, char *owner)
  * to the buffer pointed to by dest
  *
  * @dest: copy destination
- * @src: copy source
+ * @src: copy source		return (NULL);
  *
  * Return: the pointer to dest.
  */
@@ -76,6 +76,8 @@ char *_strcpy(char *dest, char *src)
 		dest[i] = src[i];
 		i++;
 	}
+
+	dest[i] = '\0';
 
 	return (dest);
 }
