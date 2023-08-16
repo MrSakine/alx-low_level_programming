@@ -3,10 +3,10 @@
  * Author: Fily M Sakine <msakine20@gmail.com>
  */
 
-#include "function_pointers.h"
 #include <stddef.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include "function_pointers.h"
 
 /**
  * print_name - prints a name
