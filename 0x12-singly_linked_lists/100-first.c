@@ -5,15 +5,14 @@
 
 #include "lists.h"
 
-void __attribute__((constructor)) printOnStartup(void);
+void __attribute__((constructor)) printOnStartUp(void);
 
 /**
- * hare - Prints a string before the
+ * printOnStartUp - Prints a string before the
  *        main function is executed.
  */
-void printOnStartup(void)
+void printOnStartUp(void)
 {
 	printf("You're beat! and yet, you must allow,\n"
 		   "I bore my house upon my back!\n");
 }
-
