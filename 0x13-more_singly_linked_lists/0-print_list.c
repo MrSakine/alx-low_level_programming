@@ -1,4 +1,4 @@
-i/*
+/*
  * File: 0-print_list.c
  * Author: Fily M Sakine <msakine20@gmail.com>
  */
@@ -13,15 +13,14 @@ i/*
  */
 size_t print_listint(const listint_t *h)
 {
-    size_t len = 0;
+	size_t len = 0;
 
-    while (h != NULL)
-    {
-        printf("%d\n", h->n);
-        h = h->next;
-        len++;
-    }
+	while (h != NULL)
+	{
+		printf("%d\n", h->n);
+		h = h->next;
+		len++;
+	}
 
-    return (len);
+	return (len);
 }
-
