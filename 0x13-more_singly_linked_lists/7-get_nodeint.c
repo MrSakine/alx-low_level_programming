@@ -11,7 +11,7 @@
  * @head: singly linked list
  * @index: number
  *
- * Return: int
+ * Return: singly linked list
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
