@@ -1,5 +1,5 @@
 /*
- * File: 0-print_list.c
+ * File: 0-print_listint.c
  * Author: Fily M Sakine <msakine20@gmail.com>
  */
 
