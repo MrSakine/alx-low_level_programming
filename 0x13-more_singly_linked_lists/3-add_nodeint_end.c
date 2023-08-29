@@ -1,5 +1,5 @@
 /*
- * File: 3-add_node_end.c
+ * File: 3-add_nodeint_end.c
  * Author: Fily M Sakine <msakine20@gmail.com>
  */
 
