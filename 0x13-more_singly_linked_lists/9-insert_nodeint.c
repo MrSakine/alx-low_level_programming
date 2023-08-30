@@ -1,0 +1,45 @@
+/*
+ * File: 9-insert_nodeint.c
+ * Author: Fily M Sakine <msakine20@gmail.com>
+ */
+
+#include "lists.h"
+
+/**
+ * insert_nodeint_at_index - returns the sum of all
+ * the data (n) of a listint_t linked list
+ * @head: singly linked list
+ * @idx: node index to look for
+ * @n: value of the new node
+ *
+ * Return: singly linked list
+ */
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
+{
+	listint_t *new;
+	listint_t *last;
+	unsigned int len = 0;
+
+	if (*head == NULL)
+		return (NULL);
+
+	new = malloc(sizeof(listint_t));
+	if (new == NULL)
+		return (NULL);
+
+	new->n = n;
+	new->next = NULL;
+	last = *head;
+
+	while (last->next != NULL && len != idx)
+	{
+		last = last->next;
+		len++;
+	}
+
+	new->next = last;
+	(*head) = new;
+
+	return (*head);
+}
+
