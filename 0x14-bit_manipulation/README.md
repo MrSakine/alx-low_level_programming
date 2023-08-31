@@ -20,3 +20,6 @@ A function that returns the number of bits you would need to flip to get from on
 
 # 100-get_endianness.c
 A function that checks the endianness
+
+# 101-password
+Find the password for this program
