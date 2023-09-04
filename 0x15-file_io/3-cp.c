@@ -71,7 +71,7 @@ int main(int ac, char **av)
 void print_error(char *text, char *str, char *buffer, int code)
 {
 	dprintf(STDERR_FILENO, "%s %s\n", text, str);
-	if (buffer)
+	if (buffer != NULL)
 		free(buffer);
 
 	exit(code);
