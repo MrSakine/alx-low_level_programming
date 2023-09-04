@@ -8,7 +8,7 @@
 /**
  * create_file - creates a file
  * @filename: file name in string
- * @letters: file content
+ * @text_content: file content
  *
  * Return: 1 on success, -1 on failure
  */
