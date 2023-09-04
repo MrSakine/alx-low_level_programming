@@ -41,8 +41,7 @@ int main(int ac, char **av)
 	to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	rd = read(from, buffer, 1024);
 
-	do
-	{
+	do {
 		if (from == -1 || rd == -1)
 			print_error("Error: Can't read from file", av[1], buffer, 98);
 
