@@ -9,11 +9,16 @@ void close_file(int fd);
 void print_error(char *text, char *str, char *buffer, int code);
 
 /**
- * main - check the code
+ * main - Copies the contents of a file to another file.
  * @ac: argument count
  * @av: argument vector
  *
- * Return: Always 0.
+ * Return: 0 on success.
+ * Description:
+ * If the argument count is incorrect - exit code 97.
+ * If file_from does not exist or cannot be read - exit code 98.
+ * If file_to cannot be created or written to - exit code 99.
+ * If file_to or file_from cannot be closed - exit code 100.
  */
 int main(int ac, char **av)
 {
