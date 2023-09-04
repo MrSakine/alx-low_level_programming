@@ -10,6 +10,8 @@ void print_error(char *text, char *str, char *buffer, int code);
 
 /**
  * main - check the code
+ * @ac: argument count
+ * @av: argument vector
  *
  * Return: Always 0.
  */
@@ -85,4 +87,3 @@ void close_file(int fd)
 		exit(100);
 	}
 }
-
