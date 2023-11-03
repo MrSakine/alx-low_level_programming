@@ -1,25 +1,6 @@
 #include "hash_tables.h"
 
 /**
- * is_whitespace_string - checks if a string is only
- * containing whitespaces:
- * @str: string to check
- *
- * Return: 1 if white space string or else 0
- */
-int is_whitespace_string(const char *str)
-{
-	while (*str != '\0')
-	{
-		if (*str != ' ' && *str != '\t' && *str != '\n')
-			return (0);
-		str++;
-	}
-
-	return (1);
-}
-
-/**
  * check_for_collision - check for collision in hash table
  * @ht: hash table you want to add or update the key/value to
  * @node: node element to check
@@ -76,11 +57,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	int is_collision;
 	unsigned long int kfn; /*kfn = key from node*/
 
-	if (ht == NULL || ht->array == NULL)
-		return (0);
-	if (key == NULL || strcmp(key, "") == 0 || value == NULL)
-		return (0);
-	if (is_whitespace_string(key) || is_whitespace_string(value))
+	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 		return (0);
 
 	new = malloc(sizeof(hash_node_t));
