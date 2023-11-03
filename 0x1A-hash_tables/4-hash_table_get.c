@@ -12,6 +12,9 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	unsigned long int kfn, index; /*kfn - key from node*/
 
+	if (ht == NULL)
+		return (NULL);
+
 	kfn = key_index((const unsigned char *)key, ht->size);
 	for (index = 0; index < ht->size; index++)
 		if (index == kfn && ht->array[index])
@@ -19,4 +22,3 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	return (NULL);
 }
-
