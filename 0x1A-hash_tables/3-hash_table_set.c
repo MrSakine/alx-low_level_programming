@@ -68,6 +68,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new->value = strdup(value);
 	new->next = NULL;
 
+	if (new->key == NULL || new->value == NULL)
+	{
+		free(new);
+		return (0);
+	}
+
 	kfn = key_index((const unsigned char *)key, ht->size);
 	is_collision = check_for_collision(ht, new);
 	if (is_collision == 0)
