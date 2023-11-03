@@ -11,9 +11,6 @@ int check_for_collision(hash_table_t *ht, hash_node_t *node)
 {
 	unsigned long int kfn, index; /*kfn - key from node*/
 
-	if (ht == NULL || ht->array == NULL)
-		return (0);
-
 	kfn = key_index((const unsigned char *)node->key, ht->size);
 	for (index = 0; index < ht->size; index++)
 		if (index == kfn && ht->array[kfn])
@@ -60,7 +57,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	int is_collision;
 	unsigned long int kfn; /*kfn = key from node*/
 
-	if (ht == NULL)
+	if (ht == NULL || ht->array == NULL)
 		return (0);
 	if (key == NULL || strcmp(key, "") == 0 || value == NULL)
 		return (0);
