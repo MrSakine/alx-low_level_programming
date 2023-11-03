@@ -60,7 +60,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	int is_collision;
 	unsigned long int kfn; /*kfn = key from node*/
 
-	if (ht == NULL || ht->array == NULL)
+	if (ht == NULL)
 		return (0);
 	if (key == NULL || strcmp(key, "") == 0 || value == NULL)
 		return (0);
