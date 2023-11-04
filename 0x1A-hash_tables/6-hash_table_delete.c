@@ -45,22 +45,13 @@ void hash_table_delete(hash_table_t *ht)
 		if (ht->array[index])
 		{
 			last = ht->array[index];
-			if (last->next == NULL)
+			while (last != NULL)
 			{
+				temp = last->next;
 				free_hash_node(last);
-			}
-			else
-			{
-				while (last->next != NULL)
-				{
-					temp = last->next;
-					free_hash_node(last);
-					last = temp;
-				}
-				free_hash_node(temp);
+				last = temp;
 			}
 		}
 	}
 	free_hash_table(ht);
 }
-
