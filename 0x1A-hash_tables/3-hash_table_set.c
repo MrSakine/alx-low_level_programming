@@ -69,6 +69,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new->next = NULL;
 
 	kfn = key_index((const unsigned char *)key, ht->size);
+	if (kfn >= ht->size)
+		return (0);
 	is_collision = check_for_collision(ht, new);
 	if (is_collision == 0)
 	{
