@@ -32,16 +32,23 @@ void move_to_top(hash_table_t *ht, hash_node_t *node, unsigned long int kfn)
 	hash_node_t *last;
 
 	last = ht->array[kfn];
-	if (strcmp(last->key, node->key) == 0)
+	while (last)
 	{
-		free(last->value);
-		last->value = node->value;
+		if (strcmp(last->key, node->key) == 0)
+		{
+			free(last->value);
+			last->value = strdup(node->value);
+			free(node->key);
+			free(node->value);
+			free(node);
+			return;
+		}
+
+		last = last->next;
 	}
-	else
-	{
-		node->next = last;
-		ht->array[kfn] = node;
-	}
+
+	node->next = ht->array[kfn];
+	ht->array[kfn] = node;
 }
 
 /**
