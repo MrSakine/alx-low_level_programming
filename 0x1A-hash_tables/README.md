@@ -20,3 +20,6 @@ a function that prints a hash table
 
 ## 6-hash_table_delete.c
 a function that deletes a hash table
+
+## 100-sorted_hash_table.c
+Ordered hash table
