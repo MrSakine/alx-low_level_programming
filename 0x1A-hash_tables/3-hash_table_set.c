@@ -29,25 +29,18 @@ int check_for_collision(hash_table_t *ht, hash_node_t *node)
  */
 void move_to_top(hash_table_t *ht, hash_node_t *node, unsigned long int kfn)
 {
-	unsigned long int index;
 	hash_node_t *last;
 
-	for (index = 0; index < ht->size; index++)
+	last = ht->array[kfn];
+	if (strcmp(last->key, node->key) == 0)
 	{
-		if (index == kfn && ht->array[kfn])
-		{
-			last = ht->array[kfn];
-			if (strcmp(last->key, node->key) == 0)
-			{
-				free(last->value);
-				last->value = node->value;
-			}
-			else
-			{
-				node->next = last;
-				ht->array[kfn] = node;
-			}
-		}
+		free(last->value);
+		last->value = node->value;
+	}
+	else
+	{
+		node->next = last;
+		ht->array[kfn] = node;
 	}
 }
 
