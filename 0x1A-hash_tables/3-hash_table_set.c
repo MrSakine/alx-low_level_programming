@@ -37,8 +37,16 @@ void move_to_top(hash_table_t *ht, hash_node_t *node, unsigned long int kfn)
 		if (index == kfn && ht->array[kfn])
 		{
 			last = ht->array[kfn];
-			node->next = last;
-			ht->array[kfn] = node;
+			if (strcmp(last->key, node->key) == 0)
+			{
+				free(last->value);
+				last->value = node->value;
+			}
+			else
+			{
+				node->next = last;
+				ht->array[kfn] = node;
+			}
 		}
 	}
 }
