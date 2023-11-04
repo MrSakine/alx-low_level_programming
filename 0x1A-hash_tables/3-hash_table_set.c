@@ -57,10 +57,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	int is_collision;
 	unsigned long int kfn; /*kfn = key from node*/
 
-	if (ht == NULL || key == NULL || strcmp(key, "") == 0 || value == NULL)
-		return (0);
-
-	if (ht->array == NULL)
+	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 		return (0);
 
 	new = malloc(sizeof(hash_node_t));
@@ -72,8 +69,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new->next = NULL;
 
 	kfn = key_index((const unsigned char *)key, ht->size);
-	if (kfn >= ht->size)
-		return (0);
 	is_collision = check_for_collision(ht, new);
 	if (is_collision == 0)
 	{
