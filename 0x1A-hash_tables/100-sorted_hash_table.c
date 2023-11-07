@@ -1,7 +1,8 @@
 #include "hash_tables.h"
 
 int scheck_for_collision(shash_table_t *ht, shash_node_t *node);
-void smove_to_top(shash_table_t *ht, shash_node_t *node, unsigned long int kfn);
+void smove_to_top(
+	shash_table_t *ht, shash_node_t *node, unsigned long int kfn);
 void add_to_array_and_update_hash_table(
 	shash_table_t *ht, shash_node_t *node, unsigned long int kfn);
 void shash_table_delete(shash_table_t *ht);
@@ -107,11 +108,8 @@ void shash_table_print(const shash_table_t *ht)
 
 	if (ht == NULL)
 		return;
-
 	printf("{");
-
 	last = ht->shead;
-
 	while (last != NULL)
 	{
 		printf("\'%s\': \'%s\'", last->key, last->value);
@@ -119,7 +117,6 @@ void shash_table_print(const shash_table_t *ht)
 		if (last)
 			printf(", ");
 	}
-
 	printf("}\n");
 }
 
@@ -135,11 +132,8 @@ void shash_table_print_rev(const shash_table_t *ht)
 
 	if (ht == NULL)
 		return;
-
 	printf("{");
-
 	last = ht->stail;
-
 	while (last != NULL)
 	{
 		printf("\'%s\': \'%s\'", last->key, last->value);
@@ -147,7 +141,6 @@ void shash_table_print_rev(const shash_table_t *ht)
 		if (last)
 			printf(", ");
 	}
-
 	printf("}\n");
 }
 
@@ -176,7 +169,7 @@ void shash_table_delete(shash_table_t *ht)
 }
 
 /**
- * check_for_collision - check for collision in hash table
+ * scheck_for_collision - check for collision in hash table
  * @ht: hash table you want to add or update the key/value to
  * @node: node element to check
  *
@@ -195,7 +188,7 @@ int scheck_for_collision(shash_table_t *ht, shash_node_t *node)
 }
 
 /**
- * move_to_top - add the new node at the beginning of the list
+ * smove_to_top - add the new node at the beginning of the list
  * @ht: hash table you want to add or update the key/value to
  * @node: node element to check
  * @kfn: key from node
@@ -274,7 +267,7 @@ void add_to_array_and_update_hash_table(
 }
 
 /**
- * free_hash_node - free hash node element
+ * sfree_hash_node - free hash node element
  * @node: node element to free
  *
  * Return: void
@@ -287,7 +280,7 @@ void sfree_hash_node(shash_node_t *node)
 }
 
 /**
- * free_hash_table - free hash table
+ * sfree_hash_table - free hash table
  * @ht: hash table you want to add or update the key/value to
  *
  * Return: void
