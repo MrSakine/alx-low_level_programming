@@ -1,12 +1,12 @@
 #include "hash_tables.h"
 
-int check_for_collision(shash_table_t *ht, shash_node_t *node);
-void move_to_top(shash_table_t *ht, shash_node_t *node, unsigned long int kfn);
+int scheck_for_collision(shash_table_t *ht, shash_node_t *node);
+void smove_to_top(shash_table_t *ht, shash_node_t *node, unsigned long int kfn);
 void add_to_array_and_update_hash_table(
 	shash_table_t *ht, shash_node_t *node, unsigned long int kfn);
 void shash_table_delete(shash_table_t *ht);
-void free_hash_node(shash_node_t *node);
-void free_hash_table(shash_table_t *ht);
+void sfree_hash_node(shash_node_t *node);
+void sfree_hash_table(shash_table_t *ht);
 
 /**
  * shash_table_create - creates a shash table
@@ -182,7 +182,7 @@ void shash_table_delete(shash_table_t *ht)
  *
  * Return: 1 if it succeeded, 0 otherwise
  */
-int check_for_collision(shash_table_t *ht, shash_node_t *node)
+int scheck_for_collision(shash_table_t *ht, shash_node_t *node)
 {
 	unsigned long int kfn, index; /*kfn - key from node*/
 
@@ -202,7 +202,7 @@ int check_for_collision(shash_table_t *ht, shash_node_t *node)
  *
  * Return: void
  */
-void move_to_top(shash_table_t *ht, shash_node_t *node, unsigned long int kfn)
+void smove_to_top(shash_table_t *ht, shash_node_t *node, unsigned long int kfn)
 {
 	shash_node_t *last;
 
@@ -279,7 +279,7 @@ void add_to_array_and_update_hash_table(
  *
  * Return: void
  */
-void free_hash_node(shash_node_t *node)
+void sfree_hash_node(shash_node_t *node)
 {
 	free(node->key);
 	free(node->value);
@@ -292,7 +292,7 @@ void free_hash_node(shash_node_t *node)
  *
  * Return: void
  */
-void free_hash_table(shash_table_t *ht)
+void sfree_hash_table(shash_table_t *ht)
 {
 	free(ht->array);
 	free(ht);
