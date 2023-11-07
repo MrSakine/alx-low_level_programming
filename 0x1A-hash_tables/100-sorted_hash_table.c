@@ -58,11 +58,11 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	new->sprev = NULL;
 	new->snext = NULL;
 	kfn = key_index((const unsigned char *)key, ht->size);
-	is_collision = check_for_collision(ht, new);
+	is_collision = scheck_for_collision(ht, new);
 	if (is_collision == 0)
 		add_to_array_and_update_hash_table(ht, new, kfn);
 	else
-		move_to_top(ht, new, kfn);
+		smove_to_top(ht, new, kfn);
 
 	return (1);
 }
@@ -168,11 +168,11 @@ void shash_table_delete(shash_table_t *ht)
 	while (last)
 	{
 		temp = last->snext;
-		free_hash_node(last);
+		sfree_hash_node(last);
 		last = temp;
 	}
 
-	free_hash_table(ht);
+	sfree_hash_table(ht);
 }
 
 /**
