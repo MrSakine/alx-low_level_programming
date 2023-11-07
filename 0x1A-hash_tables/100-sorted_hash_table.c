@@ -1,5 +1,13 @@
 #include "hash_tables.h"
 
+int check_for_collision(shash_table_t *ht, shash_node_t *node);
+void move_to_top(shash_table_t *ht, shash_node_t *node, unsigned long int kfn);
+void add_to_array_and_update_hash_table(
+	shash_table_t *ht, shash_node_t *node, unsigned long int kfn);
+void shash_table_delete(shash_table_t *ht);
+void free_hash_node(shash_node_t *node);
+void free_hash_table(shash_table_t *ht);
+
 /**
  * shash_table_create - creates a shash table
  * @size: the size of the hash table
@@ -35,10 +43,28 @@ shash_table_t *shash_table_create(unsigned long int size)
  */
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
-	(void)ht;
-	(void)key;
-	(void)value;
-	return (0);
+	shash_node_t *new;
+	int is_collision;
+	unsigned long int kfn; /*kfn = key from node*/
+
+	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
+		return (0);
+	new = malloc(sizeof(shash_node_t));
+	if (new == NULL)
+		return (0);
+	new->key = strdup(key);
+	new->value = strdup(value);
+	new->next = NULL;
+	new->sprev = NULL;
+	new->snext = NULL;
+	kfn = key_index((const unsigned char *)key, ht->size);
+	is_collision = check_for_collision(ht, new);
+	if (is_collision == 0)
+		add_to_array_and_update_hash_table(ht, new, kfn);
+	else
+		move_to_top(ht, new, kfn);
+
+	return (1);
 }
 
 /**
@@ -51,9 +77,22 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
  */
 char *shash_table_get(const shash_table_t *ht, const char *key)
 {
-	(void)ht;
-	(void)key;
-	return (NULL);
+	unsigned long int kfn; /*kfn - key from node*/
+	shash_node_t *last;
+
+	if (ht == NULL || key == NULL || *key == '\0')
+		return (NULL);
+
+	kfn = key_index((const unsigned char *)key, ht->size);
+	if (kfn >= ht->size)
+		return (NULL);
+	last = ht->shead;
+	while (last && strcmp(last->key, key) != 0)
+		last = last->snext;
+	if (last == NULL)
+		return (NULL);
+
+	return (last->value);
 }
 
 /**
@@ -64,7 +103,24 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
  */
 void shash_table_print(const shash_table_t *ht)
 {
-	(void)ht;
+	shash_node_t *last;
+
+	if (ht == NULL)
+		return;
+
+	printf("{");
+
+	last = ht->shead;
+
+	while (last != NULL)
+	{
+		printf("\'%s\': \'%s\'", last->key, last->value);
+		last = last->snext;
+		if (last)
+			printf(", ");
+	}
+
+	printf("}\n");
 }
 
 /**
@@ -75,7 +131,24 @@ void shash_table_print(const shash_table_t *ht)
  */
 void shash_table_print_rev(const shash_table_t *ht)
 {
-	(void)ht;
+	shash_node_t *last;
+
+	if (ht == NULL)
+		return;
+
+	printf("{");
+
+	last = ht->stail;
+
+	while (last != NULL)
+	{
+		printf("\'%s\': \'%s\'", last->key, last->value);
+		last = last->sprev;
+		if (last)
+			printf(", ");
+	}
+
+	printf("}\n");
 }
 
 /**
@@ -86,5 +159,141 @@ void shash_table_print_rev(const shash_table_t *ht)
  */
 void shash_table_delete(shash_table_t *ht)
 {
-	(void)ht;
+	shash_node_t *last;
+	shash_node_t *temp = NULL;
+
+	if (ht == NULL)
+		return;
+	last = ht->shead;
+	while (last)
+	{
+		temp = last->snext;
+		free_hash_node(last);
+		last = temp;
+	}
+
+	free_hash_table(ht);
+}
+
+/**
+ * check_for_collision - check for collision in hash table
+ * @ht: hash table you want to add or update the key/value to
+ * @node: node element to check
+ *
+ * Return: 1 if it succeeded, 0 otherwise
+ */
+int check_for_collision(shash_table_t *ht, shash_node_t *node)
+{
+	unsigned long int kfn, index; /*kfn - key from node*/
+
+	kfn = key_index((const unsigned char *)node->key, ht->size);
+	for (index = 0; index < ht->size; index++)
+		if (index == kfn && ht->array[kfn])
+			return (1);
+
+	return (0);
+}
+
+/**
+ * move_to_top - add the new node at the beginning of the list
+ * @ht: hash table you want to add or update the key/value to
+ * @node: node element to check
+ * @kfn: key from node
+ *
+ * Return: void
+ */
+void move_to_top(shash_table_t *ht, shash_node_t *node, unsigned long int kfn)
+{
+	shash_node_t *last;
+
+	last = ht->array[kfn];
+	while (last)
+	{
+		if (strcmp(last->key, node->key) == 0)
+		{
+			free(last->value);
+			last->value = strdup(node->value);
+			free(node->key);
+			free(node->value);
+			free(node);
+			return;
+		}
+
+		last = last->next;
+	}
+
+	if (strcmp(node->key, ht->array[kfn]->key) < 0)
+	{
+		node->snext = ht->array[kfn];
+		ht->array[kfn]->sprev = node;
+	}
+
+	ht->array[kfn] = node;
+}
+
+/**
+ * add_to_array_and_update_hash_table - add the new node into the hash
+ * @ht: hash table you want to add or update the key/value to
+ * @node: node element to add
+ * @kfn: key from node
+ *
+ * Return: void
+ */
+void add_to_array_and_update_hash_table(
+	shash_table_t *ht, shash_node_t *node, unsigned long int kfn)
+{
+	shash_node_t *last;
+
+	last = ht->shead;
+	if (last == NULL)
+	{
+		ht->shead = node;
+		ht->stail = node;
+	}
+	else if (strcmp(last->key, node->key) > 0)
+	{
+		node->sprev = NULL;
+		node->snext = ht->shead;
+		ht->shead->sprev = node;
+		ht->shead = node;
+	}
+	else
+	{
+		while (last->snext != NULL && strcmp(last->snext->key, node->key) < 0)
+			last = last->snext;
+		node->sprev = last;
+		node->snext = last->snext;
+		if (last->snext == NULL)
+			ht->stail = node;
+		else
+			last->snext->sprev = node;
+		last->snext = node;
+	}
+
+	ht->array[kfn] = node;
+}
+
+/**
+ * free_hash_node - free hash node element
+ * @node: node element to free
+ *
+ * Return: void
+ */
+void free_hash_node(shash_node_t *node)
+{
+	free(node->key);
+	free(node->value);
+	free(node);
+}
+
+/**
+ * free_hash_table - free hash table
+ * @ht: hash table you want to add or update the key/value to
+ *
+ * Return: void
+ */
+void free_hash_table(shash_table_t *ht)
+{
+	free(ht->array);
+	free(ht);
 }
