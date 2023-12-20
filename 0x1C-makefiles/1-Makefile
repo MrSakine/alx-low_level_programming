@@ -1,6 +1,6 @@
 # make file with 2 vars
 
-CC := gcc
-SRC := $(wildcard *.c)
+CC = gcc
+SRC = $(wildcard *.c)
 all:
 	$(CC) $(SRC) -o school
