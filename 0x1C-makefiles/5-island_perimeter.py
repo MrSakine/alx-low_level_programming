@@ -37,4 +37,3 @@ def island_perimeter(grid):
                 pass
 
     return (count)
-
