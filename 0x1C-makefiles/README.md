@@ -64,3 +64,9 @@ First useful Makefile.
   - The `clean`, `oclean`, `fclean`, `re` rules should never fail
   - You are not allowed to have a list of all the `.o` files
 
+### 4-Makefile
+
+Same as `3-Makefile` with a `CFLAGS` variable
+
+- `CFLAGS` favorite compiler flags: `-Wall -Werror -Wextra -pedantic`
+
