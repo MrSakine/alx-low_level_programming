@@ -70,3 +70,7 @@ Same as `3-Makefile` with a `CFLAGS` variable
 
 - `CFLAGS` favorite compiler flags: `-Wall -Werror -Wextra -pedantic`
 
+### 5-island_perimeter.py
+
+Calculate the Island Perimeter
+
