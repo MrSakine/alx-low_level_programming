@@ -74,3 +74,7 @@ Same as `3-Makefile` with a `CFLAGS` variable
 
 Calculate the Island Perimeter
 
+### 100-Makefile
+
+Same as `4-Makefile` with some restrictions
+
