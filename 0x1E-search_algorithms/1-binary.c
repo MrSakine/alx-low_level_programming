@@ -22,21 +22,15 @@ int binary_search(int *array, size_t size, int value)
 
 	start = 0;
 	end = size - 1;
-	print_array_util(array, start, end);
 
-	while (start < end)
+	while (start <= end)
 	{
 		center = start + (end - start) / 2;
+		print_array_util(array, start, end);
 		if (array[center] < value)
-		{
 			start = center + 1;
-			print_array_util(array, start, end);
-		}
 		else if (array[center] > value)
-		{
 			end = center - 1;
-			print_array_util(array, start, end);
-		}
 		else
 			return (center);
 	}
@@ -66,3 +60,4 @@ void print_array_util(int *array, int start, int end)
 
 	printf("\n");
 }
+
