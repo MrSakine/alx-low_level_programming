@@ -66,4 +66,3 @@ void print_array_util(int *array, int start, int end)
 
 	printf("\n");
 }
-

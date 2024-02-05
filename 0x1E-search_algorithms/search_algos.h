@@ -11,4 +11,3 @@ int binary_search(int *array, size_t size, int value);
 void print_array_util(int *array, int start, int end);
 
 #endif /* SEARCH_ALOGS_H */
-
