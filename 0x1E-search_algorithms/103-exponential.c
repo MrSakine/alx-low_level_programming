@@ -88,6 +88,4 @@ int exponential_search(int *array, size_t size, int value)
 	if (bound < size)
 		return (binary_search_e(array, bound / 2, bound, value));
 	return (binary_search_e(array, bound / 2, size - 1, value));
-
-	return (-1);
 }
