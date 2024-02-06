@@ -13,3 +13,7 @@ A binary search, also known as half-interval search, logarithmic search, or bina
 ## Jump search
 
 A jump Search is an algorithm for finding a specific value in a sorted array by jumping through certain steps in the array. [More info](https://en.wikipedia.org/wiki/Jump_search)
+
+## Interpolation search
+
+A interpolation search is an algorithm for searching for a key in an array that has been ordered by numerical values assigned to the keys (key values). [More info](https://en.wikipedia.org/wiki/Interpolation_search)
