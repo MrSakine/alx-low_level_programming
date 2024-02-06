@@ -17,3 +17,7 @@ A jump Search is an algorithm for finding a specific value in a sorted array by 
 ## Interpolation search
 
 A interpolation search is an algorithm for searching for a key in an array that has been ordered by numerical values assigned to the keys (key values). [More info](https://en.wikipedia.org/wiki/Interpolation_search)
+
+## Exponential search algorithm
+
+Exponential Search also known as finger search, searches for an element in a sorted array by jumping 2^i elements every iteration where i represents the value of loop control variable, and then verifying if the search element is present between last jump and the current jump. [More info](https://en.wikipedia.org/wiki/Exponential_search)
